@@ -140,3 +140,9 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
 ```
 <br>
+
+[![Updated by Santiago Echeverri](https://img.shields.io/badge/made%20by-Santiago%20Echeverri-blue.svg)](https://github.com/dassantoss)
+[![Python >=3.6](https://img.shields.io/badge/python-%3E%3D3.6-blue.svg)](https://www.python.org)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+This repository contains the initial stage of a student project to build a clone of the AirBnB website. ...
