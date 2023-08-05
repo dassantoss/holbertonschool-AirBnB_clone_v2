@@ -114,13 +114,60 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_create(self, args):
-        """ Create an object of any class"""
+        """ Create an object of any class with given parameters"""
         if not args:
             print("** class name missing **")
             return
-        elif args not in HBNBCommand.classes:
+
+        # Split the input into a list of arguments
+        args_list = args.split()
+
+        # Extract class name from the first argument
+        class_name = args_list.pop(0)
+
+        # Check if the class name is valid
+        if class_name not in HBNBCommand.classes:
             print("** class doesn't exist **")
             return
+
+        # Initialize a dictionary to store key-value pairs of attributes
+        attributes = {}
+
+        # Process the remaining arguments to extract key-value pairs
+        for arg in args_list:
+            key_value = arg.split('=')
+            if len(key_value) == 2:
+                attribute_name = key_value[0]
+                attribute_value = key_value[1]
+
+                # Handle strings with quotes
+                if attribute_value.startswith('"') and attribute_value.endswith('"'):
+                    attribute_value = attribute_value[1:-1].replace('_', ' ')
+                    attribute_value = attribute_value.replace('\\"', '"')
+                # Handle integers and floats
+                try:
+                    if '.' in attribute_value:
+                        attribute_value = float(attribute_value)
+                    else:
+                        attribute_value = int(attribute_value)
+                except ValueError:
+                    pass
+
+                attributes[attribute_name] = attribute_value
+
+        # Create an instance of the class with the given attributes
+        new_instance = HBNBCommand.classes[class_name](**attributes)
+
+        # Save the new instance to the storage
+        storage.save()
+
+        print(new_instance.id)
+        storage.save()            
+
+        if args not in HBNBCommand.classes:
+            print("** class doesn't exist **")
+            return
+
         new_instance = HBNBCommand.classes[args]()
         storage.save()
         print(new_instance.id)
