@@ -6,4 +6,5 @@ tests/test_models/test_engine/__pycache__/
 file.json
 test_params_create 
 .vscode/
+main_delete.py
 
