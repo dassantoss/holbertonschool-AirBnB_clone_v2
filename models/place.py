@@ -72,4 +72,5 @@ class Place(BaseModel, Base):
 
         @amenities.setter
         def amenities(self, amenity_list):
-                    self.amenity_ids.append(amenity_inst)
+            for amenity_inst in amenity_list:
+                self.amenity_ids.append(amenity_inst.id)
