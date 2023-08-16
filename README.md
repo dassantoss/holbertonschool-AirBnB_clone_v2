@@ -141,7 +141,7 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 ```
 <br>
 
-[![Updated by Santiago Echeverri](https://img.shields.io/badge/made%20by-Santiago%20Echeverri-blue.svg)](https://github.com/dassantoss)
+[![Updated by Santiago Echeverri](https://img.shields.io/badge/Updated%20by-Santiago%20Echeverri-blue.svg)](https://github.com/dassantoss)
 [![Python >=3.6](https://img.shields.io/badge/python-%3E%3D3.6-blue.svg)](https://www.python.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
