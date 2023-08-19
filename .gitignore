@@ -8,3 +8,4 @@ test_params_create
 .vscode/
 main_delete.py
 *.pyc
+backuptTEST.sql
